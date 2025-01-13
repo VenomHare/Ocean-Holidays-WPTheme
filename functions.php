@@ -1,5 +1,6 @@
 <?php
 require_once get_template_directory() . '/includes/manage-tour-tags.php';
+require_once get_template_directory() . '/includes/manage-nav-menu.php';
 //css
 function load_theme_styles() {
     wp_enqueue_style('tailwind', get_template_directory_uri() . '/css/style.css', array(), filemtime(get_template_directory() . '/css/style.css'), 'all');
@@ -34,4 +35,34 @@ add_theme_support('customize-selective-refresh-widgets');
 add_theme_support('editor-styles');
 
 
+function create_destinations_post()
+{
+    $args = array(
+        'labels' => array(
+            'name' => 'Destinations',
+            'singular_name' => 'Destination'
+        ),
+        'hierarchical' => true,
+        'public' => true,
+        'has_archive' => true,
+        'menu_icon' => 'dashicons-airplane',
+        'supports' => array('title','editor','thumbnail'),
+        'rewrite' => array("slug"=>"destinations")
+    );
+    register_post_type('destination', $args);
+}
+add_action( 'init', 'create_destinations_post');
 
+function destination_taxonomy()
+{
+    $args = array(
+        'labels' => array(
+            'name' => 'Countries',
+            'singular_name' => 'Country'
+        ),
+        'public'=>'true',
+        'hierarchical' => "true",
+    );
+    register_taxonomy( 'country', array("destination"), $args ) ;
+}
+add_action( 'init', 'destination_taxonomy');

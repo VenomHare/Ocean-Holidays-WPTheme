@@ -14,10 +14,10 @@
 
 
 
-    <section id="upcomingTours" class="w-svw min-h-svh flex flex-col justify-flex-start items-center pt-[10svh] gap-[2svh] text-center scroll-p-2.5 overflow-x-hidden ">
+    <section id="upcomingTours" class="blue-gradient w-svw min-h-svh flex flex-col justify-flex-start items-center pt-[10svh] gap-[2svh] text-center scroll-p-2.5 overflow-x-hidden ">
         <div class=" scroll-animate opacity-0 translate-y-5 transition-all duration-700 text-5xl font-jost font-bold text-blacktext ">Upcoming Tours</div>
         <div class="text-2xl font-poppin font-normal text-white">Exciting Destinations, Unforgettable Experience</div>
-        <div class="w-3/4 h-[60svh] max-lg:w-[90%] max-lg:h-[95%] max-md:w-full max-md:h-[95%]  max-sm:w-[90s] max-sm:h-full flex justify-center items-center gap-4 max-lg:flex-col max-md:flex-col max-sm:flex-col ">
+        <div class="w-3/4 h-[60svh] max-lg:w-[90%] max-lg:h-[95%]  max-md:w-full max-md:h-[95%]  max-sm:w-[90s] max-sm:h-full flex justify-center items-center gap-4 max-lg:flex-wrap max-sm:flex-col ">
             <?php get_template_part( "sections/section", "upcoming" );?>
         </div>
         <?php 

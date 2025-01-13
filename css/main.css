@@ -18,10 +18,16 @@
     display: inline-block;
     margin-inline: .5rem;
 }
-#upcomingTours
+.blue-gradient
 {
     background: rgb(125,211,252);
     background: linear-gradient(180deg, rgba(125,211,252,1) 0%, rgba(248,250,252,1) 90%, rgba(248,250,252,1) 100%);
+}
+.blue-bg{
+    background: rgba(125,211,252, .1);
+}
+.blue_shadow{
+    box-shadow: 0 0 5px  rgba(14, 165, 233, .5);
 }
 
 .TourDisplay{
@@ -30,7 +36,7 @@
     border-radius: .25rem;
     border: 2px solid #0ea5e9;
     position: relative;
-    transition: all ease 500ms;
+    /* transition: all ease 500ms; */
     cursor: pointer;
 }
 .TourDisplay:hover{
