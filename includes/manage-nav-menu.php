@@ -1,16 +1,4 @@
 <?php
-function custom_menu_admin_page() {
-    add_menu_page(
-        'Manage Custom Menu', 
-        'Custom Menu', 
-        'manage_options', 
-        'custom-menu', 
-        'custom_menu_page_html', 
-        'dashicons-menu', 
-        20
-    );
-}
-add_action('admin_menu', 'custom_menu_admin_page');
 
 function custom_menu_page_html() {
     if (!current_user_can('manage_options')) {

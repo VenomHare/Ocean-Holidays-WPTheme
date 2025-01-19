@@ -56,7 +56,7 @@ function manage_tour_tags_page() {
 
                 <?php submit_button('Save Tags'); ?>
             </form>
-            <p><a href="<?php echo admin_url('admin.php?page=manage-tour-tags'); ?>">&laquo; Back to Tour Listings</a></p>
+            <p><a href="<?php echo admin_url('admin.php?page=tour-tags'); ?>">&laquo; Back to Tour Listings</a></p>
         </div>
         <?php
     } else {
@@ -85,7 +85,7 @@ function manage_tour_tags_page() {
                             <td><?php echo $tour->ID; ?></td>
                             <td><?php echo $tour->post_title; ?></td>
                             <td>
-                                <a href="<?php echo admin_url('admin.php?page=manage-tour-tags&tour_id=' . $tour->ID); ?>" class="button">Manage Tags</a>
+                                <a href="<?php echo admin_url('admin.php?page=tour-tags&tour_id=' . $tour->ID); ?>" class="button">Manage Tags</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>
@@ -96,14 +96,3 @@ function manage_tour_tags_page() {
     }
 }
 
-// Hook to add the admin menu
-function tour_tags_admin_menu() {
-    add_menu_page(
-        'Manage Tour Tags',          // Page title
-        'Tour Tags',                 // Menu title
-        'manage_options',            // Capability
-        'manage-tour-tags',          // Menu slug
-        'manage_tour_tags_page'      // Callback function
-    );
-}
-add_action('admin_menu', 'tour_tags_admin_menu');

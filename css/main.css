@@ -3,141 +3,206 @@
 @tailwind components;
 @tailwind utilities;
 
+table,
+th,
+td {
+    all: unset;
+    border: 1px solid;
+    border-collapse: collapse;
+    vertical-align: middle;
+}
+
+/* Optionally, add back any desired custom styles */
+table {
+    display: table;
+    width: 100%;
+}
+
+th,
+td {
+    display: table-cell;
+    padding: 5px;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+button, .button {
+    padding: .5rem 1rem;
+    background-color: #233dff;
+    border-radius: 5px;
+    color: #cedee6;
+    font-weight: 500;
+}
+
+.yatra-proceed-to-checkout{
+    padding: .5rem 1rem;
+    margin: .5rem;
+    font-size: 1.3rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+textarea,
+select {
+    padding: .5rem .5rem;
+    font-family: 'Poppins', sans-serif;
+    background-color: #aac6d342;
+    border: 1px solid #7dd4fc;
+    border-radius: 5px;
+    color: #000;
+}
+
+@media not all and (min-width: 640px) {
+    #tour-book_review
+    {
+        overflow-x: auto !important;
+    }
+}
+/* #menubtn{
+    all: unset;
+} */
+@media not all and (min-width: 1024px){
+    .alignwide{
+        display: flex;
+        flex-direction: column;
+        gap: 1svh;
+    }
+    .yatra-my-account-navigation{
+        width: 90svw !important;
+    }
+    .yatra-my-account-content{
+        width: 95svw !important;
+        overflow-x: auto;
+    }
+}
+
+.coupon{
+    padding: .5rem;
+}
+.coupon a{
+    background: #dc2626;
+    padding:.5rem;
+    border-radius: 5px;
+    color: #fff;
+}
 
 .bookanim {
     transition: all 1s ease;
     overflow: hidden;
 }
-.bookanim i{
+
+.bookanim i {
     transform: translateX(500%);
     rotate: 0;
     display: none;
 }
-.bookanim:hover i{
+
+.bookanim:hover i {
     animation: bookin .5s ease forwards;
     display: inline-block;
     margin-inline: .5rem;
 }
-.blue-gradient
-{
-    background: rgb(125,211,252);
-    background: linear-gradient(180deg, rgba(125,211,252,1) 0%, rgba(248,250,252,1) 90%, rgba(248,250,252,1) 100%);
-}
-.blue-bg{
-    background: rgba(125,211,252, .1);
-}
-.blue_shadow{
-    box-shadow: 0 0 5px  rgba(14, 165, 233, .5);
+
+.blue-gradient {
+    background: rgb(125, 211, 252);
+    background: linear-gradient(180deg, rgba(125, 211, 252, 1) 0%, rgba(248, 250, 252, 1) 90%, rgba(248, 250, 252, 1) 100%);
 }
 
-.TourDisplay{
-    width: 35%;
-    height: 100%;
-    border-radius: .25rem;
-    border: 2px solid #0ea5e9;
-    position: relative;
-    /* transition: all ease 500ms; */
-    cursor: pointer;
+.reverse-blue-gradient {
+    background: rgb(125, 211, 252);
+    background: linear-gradient(0deg, rgba(125, 211, 252, 1) 0%, rgba(248, 250, 252, 1) 90%, rgba(248, 250, 252, 1) 100%);
 }
-.TourDisplay:hover{
-    scale: 1.02;
-}
-.TourDisplayImg{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    background: #0ea5e9;
-}
-.TourDisplayInfo{
-    width: 75%;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 1rem;
-    border-radius: .5rem;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    background: #233dffec;
-    color: #f8fafc;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: .25rem;
+.blue-bg {
+    background: rgba(125, 211, 252, .1);
 }
-.h-seperator
-{
-    width: 95%;
-    height: 1px;
-    background-color: #f8fafc;
+
+.blue_shadow {
+    box-shadow: 0 0 5px rgba(14, 165, 233, .5);
+}
+
+.blue_shadow_dark {
+    box-shadow: 0 0 15px 5px rgba(14, 165, 233, .5);
+}
+
+.yatra-tour-filter-top-inner {
+    background-color: #7dd4fcb9 !important;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.yatra-tour-filter-sidebar-inner {
+    background-color: #7dd4fcb9 !important;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.yatra-tour-single-item-inner {
+    background-color: #cedee6 !important;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.wp-post-image {
     border-radius: 5px;
 }
-.TourDisplayTitle
-{
-    font-size: 1.125rem; /* 18px */
-    line-height: 1.75rem; /* 28px */
-    font-weight: 700;
+.yatra-my-account-navigation{
+    width: 15svw;
+    font-family: 'Poppins',sans-serif;
 }
-.striked-am{
-    color: #f8fafcc0;
-    font-size: .9rem; /* 18px */
-    line-height: .9rem; /* 28px */
+.yatra-my-account-navigation ul .active::before{
+    display: none;
+    width: 100%;
 }
-@media not all and (min-width: 640px) { 
-    .TourDisplay{
-        width: 100%;
-        height: 100%;
-    }
-    .TourDisplayInfo{
-        gap: .2rem;
-        padding: 10px 0;
-    }
-    .TourDisplayTitle
-    {
-        font-size: 1rem; /* 18px */
-        line-height: 1rem; /* 28px */
-        font-weight: 700;
-    }
+.yatra-my-account-navigation ul .active a{
+    background-color: #7dd4fc;
 }
-@media not all and (min-width: 768px) { 
-    .TourDisplay{
-        width: 90%;
-        height: 100%;
-    }
-    .TourDisplayInfo{
-        gap: .2rem;
-        padding: 10px 0;
-    }
-    .TourDisplayTitle
-    {
-        font-size: 1rem; /* 18px */
-        line-height: 1rem; /* 28px */
-        font-weight: 700;
-    }
+.yatra-my-account-navigation ul li{
+    width: 100%;
 }
-@media not all and (min-width: 1024px) { 
-    .TourDisplay{
-        width: 100%;
-        height: 100%;
-    }
-    .TourDisplayInfo{
-        gap: .2rem;
-    }
-    .TourDisplayTitle
-    {
-        font-size: 1rem; /* 18px */
-        line-height: 1rem; /* 28px */
-        font-weight: 700;
-    }
+.yatra-my-account-navigation ul li a{
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 1.3rem;
+    margin-top: 5px;
+    cursor: pointer;
 }
+.yatra-my-account-navigation ul li a:hover{
+    background-color: #68686980;
+}
+/* width */
+::-webkit-scrollbar {
+    width: .5svw;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #7dd4fc00;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #233dff;
+    border-radius: 2px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #233dffcc;
+}
+
+
 @keyframes bookin {
-    0%{
+    0% {
         transform: translateX(400%);
         rotate: 0;
     }
-    100%{
+
+    100% {
         transform: translateX(0);
         rotate: -45deg;
     }
