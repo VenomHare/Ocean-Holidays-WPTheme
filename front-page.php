@@ -28,19 +28,19 @@
         </a>
     </section> 
 
-    <section id="destinaitons" class="reverse-blue-gradient w-svw min-h-svh flex flex-col justify-flex-start items-center pt-[10svh] gap-[2svh] text-center scroll-p-2.5 overflow-x-hidden ">
-        <div class=" scroll-animate opacity-0 translate-y-5 transition-all duration-700 text-6xl font-jost font-bold text-bluetext max-lg:text-4xl ">Popular Destinations</div>
-        <div class="text-4xl font-poppin font-semibold pt-2 text-skyblue max-lg:text-lg">Explore the World's Most Breathtaking Locations</div>
-        <?php get_template_part( "sections/section", "destinations" );?>
+    <!-- <section id="destinaitons" class="reverse-blue-gradient w-svw min-h-svh flex flex-col justify-flex-start items-center pt-[10svh] gap-[2svh] text-center scroll-p-2.5 overflow-x-hidden "> -->
+        <!-- <div class=" scroll-animate opacity-0 translate-y-5 transition-all duration-700 text-6xl font-jost font-bold text-bluetext max-lg:text-4xl ">Popular Destinations</div> -->
+        <!-- <div class="text-4xl font-poppin font-semibold pt-2 text-skyblue max-lg:text-lg">Explore the World's Most Breathtaking Locations</div> -->
+        <?php //get_template_part( "sections/section", "destinations" );?>
         <?php 
-            $page_slug = 'upcoming-tours'; 
-            $page = get_page_by_path($page_slug);
-            $page_url = get_permalink($page->ID);
+            // $page_slug = 'upcoming-tours'; 
+            // $page = get_page_by_path($page_slug);
+            // $page_url = get_permalink($page->ID);
         ?>
-        <a href="<?php echo $page_url?>" class="animate-slideInFromTop font-poppin w-[25%] h-[7.5svh] max-lg:w-1/2 max-lg:h-[5svh] max-md:w-[80%] max-md:h-[5svh] max-sm:w-[80%] max-sm:h-[5svh] flex justify-center items-center gap-1 text-white z-10 text-2xl bg-primary rounded-2xl max-sm:rounded-lg bookanim active:scale-90">
-            More Destinations <i class="fa-solid fa-arrow-right z-10"></i>
-        </a>
-    </section>
+        <!-- <a href="<?php //echo $page_url?>" class="animate-slideInFromTop font-poppin w-[25%] h-[7.5svh] max-lg:w-1/2 max-lg:h-[5svh] max-md:w-[80%] max-md:h-[5svh] max-sm:w-[80%] max-sm:h-[5svh] flex justify-center items-center gap-1 text-white z-10 text-2xl bg-primary rounded-2xl max-sm:rounded-lg bookanim active:scale-90"> -->
+            <!-- More Destinations <i class="fa-solid fa-arrow-right z-10"></i> -->
+        <!-- </a> -->
+    <!-- </section> -->
 
 
     <section id="specialOffers" class="blue-gradient w-svw min-h-svh flex flex-col justify-flex-start items-center pt-[10svh] gap-[2svh] text-center scroll-p-2.5 overflow-x-hidden ">
