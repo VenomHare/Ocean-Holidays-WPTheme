@@ -22,8 +22,8 @@
                 </a>
                 <div class="max-w-[20svw] h-auto max-xl:max-w-[45svw] flex flex-col items-start gap-2 max-sm:max-w-[70svw]">
                     <div class="text-2xl font-poppin font-bold max-lg:text-xl">Ocean Pacific Holidays</div>
-                    <div class="text-sm font-poppin w-1/2 max-xl:w-2/3 max-lg:w-full">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+                    <div class="text-sm font-poppin w-3/4 max-xl:w-2/3 max-lg:w-full">
+                        Escape to paradise with Ocean Pacific Holidays! From dreamy beach retreats to cultural adventures, we craft unforgettable travel experiences tailored just for you. Let’s turn your dream journey into reality!
                     </div>
                 </div>
             </div>
@@ -44,13 +44,13 @@
             <div class="flex items-center gap-4">
                 <i class="fa-solid fa-mobile-screen text-3xl"></i>
                 <div class="font-bold">
-                    +91 34234 14249
+                    +91 84540 42632
                 </div>
             </div>
             <div class="flex items-center gap-2">
                 <i class="fa-solid fa-envelope text-3xl"></i>
                 <div class="font-semibold">
-                    support@oceanpacificholidays.com
+                    oceanpacificholidays.mail@gmail.com
                 </div>
             </div>
         </div>
